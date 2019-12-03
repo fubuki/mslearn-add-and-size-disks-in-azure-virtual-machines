@@ -28,7 +28,7 @@ sudo mkfs -t ext4 /dev/sdc1
 sudo mkdir /uploads
 
 # Attach the disk to the mount point.
-sudo mount /dev/sdc1 /uploads
+sudo mount /dev/sdc1 /esdata
 
 # Get the UUID of the new drive, /dev/sdc1, and save it as a variable.
 UUID=$(sudo -i blkid | grep '/dev/sdc1' | perl -pe 's/.+([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}).+/$1/')
